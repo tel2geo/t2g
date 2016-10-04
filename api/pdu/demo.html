@@ -1,0 +1,57 @@
+<!doctype html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="FR-fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://tel2geo.fr/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://tel2geo.fr/js/jquery.min.js"></script>
+<title> PDU ENCODER / DECODER - T2G repository</title>
+</head>
+<body>
+<form>
+<INPUT name="pdu" class="col-xs-2" size="3"  id="pdu" Type="text" placeholder="E8329BFD4697D9EC37">
+<INPUT name="BUTTON" Type="BUTTON" class="btn btn-default" onClick="decode()" VALUE="decoder">
+<INPUT name="BUTTON" Type="BUTTON" class="btn btn-default" onClick="encode()" VALUE="encoder">
+
+</form>
+<script>
+
+function decode()
+{
+var pdu = document.getElementById('pdu').value;
+var element = document.getElementById('resultatjsonphp');
+$.ajax({
+    		url : "https://api.tel2geo.fr/pdu/?i="+pdu+"&t=dec&callback=?",
+		    dataType:"jsonp",
+		    jsonp:"callback",
+		    success:function(data)
+		    {
+
+		element.innerHTML = '<b>Type :</b> ' + data.type + '<br><b>TXT:</b> ' + data.TXT ;
+				element.className = 'pass';
+		    }
+		});
+}
+function encode()
+{
+var pdu = document.getElementById('pdu').value;
+var element = document.getElementById('resultatjsonphp');
+$.ajax({
+    		url : "https://api.tel2geo.fr/pdu/?i="+pdu+"&t=enc&callback=?",
+		    dataType:"jsonp",
+		    jsonp:"callback",
+		    success:function(data)
+		    {
+
+		element.innerHTML = '<b>Type :</b> ' + data.type + '<br><b>TXT:</b> ' + data.TXT ;
+				element.className = 'pass';
+		    }
+		});
+}
+</script>
+<style type="text/css">
+	#resultatjsonphp { border: 1px solid; padding: 1em; }
+	.pass { background: lightgreen; border-color: #468847; padding: 1em; }
+</style>
+<p id="resultatjsonphp">Encodeur / décodeur de chaine de caractère au format PDU (fonctionne sur les sms et les commandes modem / AT)...…</p>
+</body>
+</html>

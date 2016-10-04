@@ -1,0 +1,18 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine on
+RewriteBase /t2g/
+
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?(.*)$ $1/$2=$3&$4 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/(.+?)&?$ $1.php?$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+
+
+
+
