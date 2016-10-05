@@ -1,0 +1,55 @@
+body, html {
+  margin: 0px;
+  font-family: helvetica, arial;
+  color: #333;
+  background-image: url("../images/bg.png");
+  background-repeat: repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#info {
+  color: #21759b;
+  position: absolute;
+  padding: 15px;
+  left: 25px;
+  top: 25px;
+  z-index: 1;
+}
+
+#msg {
+  font: 1em helvetica, arial;
+  width: 300px;
+}
+#msgindicatif {
+  font: 2em helvetica, arial;
+}
+
+#info h3 {
+  margin: 1px;
+}
+
+#loading {
+  color: #0089bf;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#link {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+}
+.flag, .f32 .flag { width: auto; clear: right; }
+.f32 .flag { padding-left: 44px; }
+.f32 i { margin-top:-6px; color: silver; }

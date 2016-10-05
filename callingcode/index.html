@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>International Phone Prefix - Country Code information </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   	<link href="css/flags32.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="http://prefix.tel2geo.fr/images/favicon.ico" type="image/x-icon">
+
+	<!-- SEO Moteurs de recherche -->
+	<meta name="description" content="International Phone Prefix - Country Code Information , Data Visualisation Demo - WebGL - Three.js D3.js ">
+    <meta name="keywords" content="International Prefix, phone prefix, country code, three.js,Country code, International Phone, Countries Prefix, Data viz">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="ASCMV">   
+	<!-- SEO OpenGraph - FB -->
+	<meta property="og:title" content="International Phone Prefix - Country Code information - Data Viz" />
+	<meta property="og:site_name" content="prefix.tel2geo.fr"/>
+	<meta property="og:url" content="http://prefix.tel2geo.fr" />
+	<meta property="og:image" content="http://prefix.tel2geo.fr/images/prefix.png" />
+	<meta property="og:description" content="This Webpage is a showoff of data-viz for countries code informations related to telephone prefixes." />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:tag" content="International prefix" />
+	<meta property="article:tag" content="Country Code info" />
+	<meta property="article:tag" content="Countries Information" />
+	<meta property="article:tag" content="Phones Prefixes" />
+	<meta property="article:tag" content="Data viz - WebGl" />
+	<meta property="article:tag" content="Three.js, D3.js" />
+	<meta property="article:tag" content="WEB GL Globe" />
+	<meta property="article:tag" content="Country Code information" />
+	<meta property="article:tag" content="Phone prefix" />
+	<!-- SEO Twitter -->
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="This Webpage is a showoff of data-viz for countries code informations related to telephone prefixes."/>
+	<meta name="twitter:title" content="International Phone Prefix - Country Code information - Data Viz"/>
+	<meta name="twitter:domain" content="prefix.tel2geo.fr"/>
+	<meta name="twitter:image" content="http://prefix.tel2geo.fr/images/prefix.png"/>
+
+	<!-- Feuilles de styles de la page -->
+
+
+  </head>
+  <body>
+    <div id="info">
+      <h3>Calling Code information</h3>
+      <div id="msg">Mouseover a country...</div>
+      <div>Click to rotate the globe</div>
+    </div>
+    <div id="loading">Loading...</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="node_modules/babel-core/browser-polyfill.js"></script>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script src="node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+      System.config({
+        baseURL: '/',
+        map: {
+          d3: 'node_modules/d3/d3',
+          THREE: 'node_modules/three/three',
+          topojson: 'node_modules/topojson/topojson',
+          SubUnit: 'node_modules/src/index'
+        },
+        transpiler: 'babel'
+      });
+
+      System.import('js/main');
+  </script>
+  </body>
+</html>
