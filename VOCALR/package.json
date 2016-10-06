@@ -1,0 +1,30 @@
+{
+  "name": "API_VOCALR",
+  "version": "1.0.0",
+  "description": "Vocal Recognition using speak.js , annyang, simpleban, meteo, and biorhythm",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: aucun test effectués\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tel2geo/t2g/t2g.git"
+  },
+  "keywords": [
+    "VOCALR",
+    "API",
+    "SIMPLEBAN",
+    "METEO",
+    "BIORHYTHM"
+  ],
+  "author": "Thibaut LOMBARD <webmaster@tel2geo.fr> (https://tel2geo.fr/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tel2geo/t2g/issues"
+  },
+  "homepage": "https://vocal.ctrlfagency.com",
+  "dependencies": {
+    "ejs": "*",
+    "express": "*"
+  }
+}
