@@ -28,7 +28,8 @@ The T2G repo contains multiples licenses depending of the use of the scripts and
 
 
 ## contact
-Feel free to contact me for a partnership, a job opportunity, i am currently open to most of coding proposals at **contact@ctrlfagency.com**.
+Feel free to contact me for a partnership, a job opportunity, i am currently open to most of coding proposals at **webmaster@tel2geo.fr**.
+&nbsp;
 Sincerely,
 Thibaut LOMBARD.
 
