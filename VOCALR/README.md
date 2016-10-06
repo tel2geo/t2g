@@ -21,7 +21,6 @@ To view the demo , follow this link : [demo]
 ```sh
 $ cd /var/www/vocal.siteweb.tld 
 $ git clone https://github.com/tel2geo/t2g.git
-$ nodejs server.js &
 ```
 Install the app.
 ```sh
