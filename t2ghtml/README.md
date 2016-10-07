@@ -1,8 +1,8 @@
 # T2G-HTML
 T2GHTML est un mini site pour utiliser l'api t2g (ici -> [faq-t2g]), qui permet l'utilisation de la base de donnée de numérotation arcep correllée avec les données de géolocalisation OSM (OpenstreetMap), c'est ainsi possible de géolocaliser les lignes de téléphones fixes approximativement en fonction du chef-lieu, et d'obtenir les informations opérateurs.
 
-* [t2g-html]: <https://github.com/tel2geo/t2g/tree/master/t2ghtml/>
-* [t2g-api]: <https://github.com/tel2geo/t2g/tree/master/api/>
+* [t2g-html] - le site
+* [t2g-api] - l'api 
 
 ## Fonctionnalités
 * Géolocalisation avec Google Maps - Image API.
@@ -12,12 +12,7 @@ T2GHTML est un mini site pour utiliser l'api t2g (ici -> [faq-t2g]), qui permet 
 
 
 ## Installation
-Télécharger tout le repository.
-```sh
-$ git clone http://github.com/tel2geo/t2g.git t2g
-
-```
-Ou simplement extraire l'archive [t2g-html-archive].
+Simplement extraire l'archive [t2g-html-archive].
 ```sh
 $ tar -xf t2ghtml.tar.gz
 
