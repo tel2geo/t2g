@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 
+	TEL2GEO With API T2G
+	Copyright - 2014 - 2017
+	License : 	GNU GPL3 
+	Author :	Thibaut LOMBARD
+	About : Geolocation enabled for landline phone.
+			
+	Sincerely,
+	Thibaut LOMBARD.
+-->	
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>TEL2GEO.FR - Géolocaliser avec le numéro de téléphone</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+	<meta name="description" content="Tel2geo permet de géolocaliser à partir du numéro de téléphone, et obtenir les informations relatives à l'opérateur, site web, et api.">
+    <meta name="keywords" content="api, numéro de téléphone, géolocalisation, gratuit, opérateur, mobile , localiser, VOIP, wikipedia, laposte, arcep, opendata">
+	<meta name="robots" content="index,follow">
+	<meta name="copyright" content="thibautlombard">   
+	<meta property="og:title" content="Géolocaliser avec le numéro de téléphone" />
+	<meta property="og:site_name" content="TEL2GEO.FR"/>
+	<meta property="og:url" content="https://tel2geo.fr/" />
+	<meta property="og:description" content="Tel2geo permet de géolocaliser à partir du numéro de téléphone, et obtenir les informations relatives à l'opérateur, site web, et api." />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="article:author" content="https://www.facebook.com/pages/Thibaut-Lombard/1523679627871959" />
+	<meta property="og:image" content="https://tel2geo.fr/img/ogimage.jpg" />
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/style.min.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<!-- javascripts -->
+	<!--[if IE]>-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.lettering.js"></script>
+ 	<script src="js/jquery.fittext.js"></script>
+  	<script src="js/jquery.validnum.min.js"></script>
+  	<script src="js/tel2.min.js"></script>
+ 	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").lettering();	
+			$('#button-id').click(function() {
+			  processnumero($('#numero').val());
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="container">
+	<header>
+		<h1>TEL2GEO</h1>
+		<p class="api">TEL2GEO permet de géolocaliser et d'obtenir les informations sur le numéro de téléphone en France métropolitaine et DOM TOM. Saisissez un numéro de téléphone à 10 chiffres dans le formulaire ci dessous. </p>
+	</header>
+	<section id="features" class="details">
+	<div id="mainnumero">
+  	<form>
+		<input type="text" class="phone_number" id="numero">
+		<input type="button" id="button-id" value="vérifier" class="solid">
+ 	 </form>
+	</div>
+		<div id="results">
+		<p id="infodebase"></p>
+		<p id="checknum"></p>
+		<p id="checkfai"></p>
+		<p id="checkfaifull"></p>
+		<p id="checkzne"></p>
+		<p id="checkgeo"></p>
+		</div>
+	<p>Démonstration de l'API, <a href="https://api.tel2geo.fr/">Cliquez ici !</a></p>
+	</section>
+	<footer>
+		<p><b>TEL2GEO.FR &copy; <a href="http://thibautlombard.space/b/">Thibaut LOMBARD</a></b> Code Source License <a href="https://www.gnu.org/licenses/gpl-3.0.fr.html">GNU GPL3</a><br><b>Opendata (<a href="https://www.data.gouv.fr/fr/">data.gouv.fr</a>) :</b> arcep &copy;, laposte &copy;, Wikipedia &copy;, Openstreetmap &copy;.<br><b>Credits :</b> <a href="http://fittextjs.com/">fittext</a>, <a href="http://omarshammas.github.io/formancejs">Formancejs</a>, <a href="http://jquery.com/">Jquery</a> .</p>
+	</footer>
+	<script type="text/javascript">
+		$("h1").fitText(0.273);
+		$(".api").fitText(2);
+	</script>
+</body>
+</html>
