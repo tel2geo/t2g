@@ -6,6 +6,7 @@ Be the welcome to the T2G repository, this repository intends to store the work 
 * [vocalR] - Voice recognition application for google chrome / Android webspeech API, with plenty of features included.
 * [callingcode] - A data visualisation WebGL D3.js app for displaying callingcode on a globe. 
 * [t2g-html] - Contain the tel2geo website, with t2g-api usage basic for landline phone geolocation. 
+* [t2g-android] - Contain the tel2geo Blog Android APK application with source code.
 
 
 ## Download the whole T2G Repo
@@ -44,5 +45,7 @@ Thibaut LOMBARD.
    [t2g-html]: <https://github.com/tel2geo/t2g/tree/master/t2ghtml/>
    [vocalR]: <https://github.com/tel2geo/t2g/tree/master/VOCALR>
    [callingcode]: <https://github.com/tel2geo/t2g/tree/master/callingcode>
+   [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android>
+
   
 
