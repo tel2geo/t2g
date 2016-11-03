@@ -18,7 +18,7 @@ Sincerely,
 Thibaut LOMBARD.
 
 [comment]: #
-   [blog-tel2geo-android-application]: <https://github.com/tel2geo/t2g/tree/master/t2g-android/Blog-Tel2Geo.apk>
+   [blog-tel2geo-android-application]: <https://github.com/tel2geo/t2g/raw/master/t2g-android/Blog-Tel2Geo.apk>
    [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android/>
 
   
