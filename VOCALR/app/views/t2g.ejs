@@ -166,14 +166,17 @@
 											}
 									// vérifie si la limite est configurée
 									var checklimit = addr.split("limite");
+									if (typeof checklimit[1] !== 'undefined' && checklimit[1] !== '') {
 									//supprime les espaces blancs
-									var wws =  checklimit[1].replace(/\s/g, "");
-									if(isInt(wws) && wws<300 && typeof(wws) != "undefined" && wws !== null ){
+									var wws =  checklimit[1].replace(/\s/g, ""); 
+									if(isInt(wws) && wws<300 && typeof wws !== "undefined" && wws !== null ){
 										var limit = wws;
 										var addr = checklimit[0];
+									
 												} else {
 	   									var limit=10;
 												}
+										}//fin du double if
 								
 								$.ajax({
 								//url : "https://api.tel2geo.fr/simpleban/?addr="+addr+"&limit=10c&callback=?",
