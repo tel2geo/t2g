@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>VocalR Speech-To-Text Javascript Library - Thibaut Marie Pierre LOMBARD, GNU GPL3 License.</title>
+			<script src="vocalR.js"></script>
+			<script type="text/javascript">
+			window.onload=recognize(VocalR_obj_functions);
+			////////////////////////////////////////////////////
+			function rechargerpage(){
+					window.location.reload();
+						};
+			function bonjour () 	{
+					alert("Tout va bien ?");
+						};
+			function tqui (searchtag){
+					dit_qui = searchtag.split(" ");
+					alert('bonjour '+dit_qui[0]);
+						};
+			////////////////////////////////////////////////////
+			var VocalR_obj_functions = {
+				bonjour:  "bonjour",
+				rechargerpage: "recharger la page",
+				stop:			"stop",
+				VocalR_obj_functions_S : { 
+					tqui:	"je suis "
+									}
+								};
+			////////////////////////////////////////////////////
+		</script>
+	</head>
+	<body>
+		<p>Les commandes vocales sont les suivantes :
+		<ul>
+			<li>Dire "bonjour"</li>
+			<li>Dire "je suis" puis votre prénom ...</li>
+			<li>Dire "stop" pour stopper la reconaissance vocale</li>
+			<li>Dire "recharger la page" pour recharger la page</li>
+		</ul>
+		Astuces : Pressez F12 pour débugger.</p>
+	</body>
+</html>

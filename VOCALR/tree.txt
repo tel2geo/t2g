@@ -1,0 +1,45 @@
+biorhythm.html [error opening dir]
+css
+├── bootstrap.min.css
+├── bootstrap-theme.min.css
+└── main.css
+demo.html [error opening dir]
+htaccess [error opening dir]
+img
+├── brokenclouds.svg
+├── drizzle.svg
+├── fewcloudsnight.svg
+├── fewclouds.svg
+├── mic-animate.gif
+├── mic.gif
+├── mic-slash.gif
+├── mini_icon_say.png
+├── mist.svg
+├── moon.svg
+├── mosaic1.png
+├── palette.png
+├── rain.svg
+├── scatteredclouds.svg
+├── snow.svg
+├── sun.svg
+├── thunderstorm.svg
+└── vocalr.png
+index.html [error opening dir]
+js
+├── biorithm.js
+├── bootstrap.min.js
+├── hello.js
+├── highlight.pack.js
+├── jquery.min.js
+├── meteo.js
+├── moment-with-locales.js
+├── prenoms.js
+├── t2g.js
+└── vocalR.js
+license.txt [error opening dir]
+meteo.html [error opening dir]
+prenoms.html [error opening dir]
+README.md [error opening dir]
+t2g.html [error opening dir]
+
+0 directories, 31 files

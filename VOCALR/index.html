@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.ribbon {
+  /* positioning */
+  position: fixed;
+  padding: 5px 45px;
+  width: 128px;
+  /* top right of the page */
+  top: 50px;
+  right: -50px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /* effects with some shadow */
+  box-shadow: 0 0 0 3px #2c699e, 0 0 20px -3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0 #ffffff, 0 0 5px rgba(0, 0, 0, 0.3);
+  /* looks */
+  background-color: #2c699e;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  /* ribbon effects */
+  border: 2px dotted #ffffff;
+  /* webkit antialias fix */
+  -webkit-backface-visibility: hidden;
+  letter-spacing: .5px;
+}
+</style>
+	<title>VOCALR - GNU Vocal Recognition Web APP by Thibaut LOMBARD</title>
+	<!--
+	Ajout des balises SEO FB TWITTER META
+	-->
+	<meta charset="UTF-8" />
+	<meta name="description" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD) - et text2speech, comprenant des API optimisés, un modèle MVC et distribué en lisense libre GNU."/>
+	<link rel="canonical" href="https://vocal.ctrlfagency.com/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="VOCALR Application WEB de reconaissance vocale" />
+	<meta property="og:description" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD) - et text2speech, comprenant des API optimisés, un modèle MVC et distribué en lisense libre GNU." />
+	<meta property="og:url" content="https://vocal.ctrlfagency.com/" />
+	<meta property="og:site_name" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD)" />
+	<meta property="article:publisher" content="https://www.facebook.com/ctrlfagency/" />
+	<meta property="article:tag" content="vocalr" />
+	<meta property="article:tag" content="vocal recognition" />
+	<meta property="article:tag" content="XHR" />
+	<meta property="article:tag" content="MVC" />
+	<meta property="article:tag" content="API" />
+	<meta property="article:tag" content="Prénoms" />
+	<meta property="article:tag" content="biorythme" />
+	<meta property="article:tag" content="hello world" />
+	<meta property="og:image" content="https://vocal.ctrlfagency.com/img/vocalr.png" />
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD) - et text2speech, comprenant des API optimisés, un modèle MVC et distribué en lisense libre GNU."/>
+	<meta name="twitter:title" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD) - Hello World"/>
+	<meta name="twitter:domain" content="VOCALR Application de reconaissance vocale (par Thibaut LOMBARD)"/>
+
+	<!-- Jquery doit etre placé avant bootstrap pour éviter les erreurs -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vocalR.js"></script>
+	<script src="js/hello.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script>
+	//condition qui permet de forcer la page à se charger en https
+	if (window.location.protocol != "https:")
+	window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+	window.onload=recognize(VocalR_obj_functions);
+
+				var VocalR_obj_functions = {
+				rechargerpage: "recharger la page",
+				pageprenoms: "prénom",
+				t2g: "géolocalisation",
+				pagebiorythme: "biorythme",
+				meteo: 			"météo",
+				hello: 			"bonjour",
+				stop:			"stop",
+				VocalR_obj_functions_S : { 
+					bonjour:	"temps "
+									}
+								};
+								
+			var scrollTo = function(identifier, speed) {
+    		$('html, body').animate({
+        	scrollTop: $(identifier).offset().top
+    		}, speed || 1000);}
+  	</script>
+	<link rel="stylesheet" href="css/main.css" />
+
+</head>
+<body>
+<a href='https://github.com/tel2geo/t2g' style='position:fixed;padding:5px 45px;width:250px;top:60px;right:-50px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);box-shadow:0 0 0 3px #2c699e, 0 0 20px -3px rgba(0, 0, 0, 0.5);text-shadow:0 0 0 #ffffff, 0 0 5px rgba(0, 0, 0, 0.3);background-color:#2c699e;color:#ffffff;font-size:13px;font-family:sans-serif;text-decoration:none;font-weight:bold;z-index:9999;border:2px dotted #ffffff;-webkit-backface-visibility:hidden;letter-spacing:.5px;'>Fork me on Github</a>
+	  <div style="margin:100px;">
+	  <nav class="navbar navbar-inverse navbar-static-top">
+	  <div class="container">
+	    <a class="navbar-brand" href="/">VOCALR</a>
+	    <ul class="nav navbar-nav">
+	      <li class="active">
+		<a href="/">Home</a>
+	      </li>
+	      <li>
+		<a href="/prenoms">Prenoms</a>
+	      </li>
+	      <li>
+		<a href="/biorhythm">Biorhythm</a>
+	      </li>
+	      <li>
+		<a href="/t2g">Geolocation</a>
+	      </li>	      
+	      <li>
+		<a href="/meteo">Weather</a>
+	      </li>
+	    </ul>
+	  </div>
+	  </nav>
+	    <div class="jumbotron"  style="padding:40px;">
+	      <h1>Vocal Recognition (in French !)</h1>
+	      <p align="justify">Vocal Recognition is a proof of concept designed to show-off the features of vocal recognition into Google Chrome and its WebSpeech API. This script is distributed under GNU (general public license). Most languages are available.</p>
+		<h2>Let's try</h2>
+		<!-- 
+		Déboggage de la fonction slidedown : 
+		************************************
+		<script>
+		$(document).ready(function(){
+			    $(".btn2").click(function(){
+			$(".hello").show();
+			$(".hello").slideDown(1000);	
+		    });
+		});
+		</script>
+		<button class="btn2">Slide down</button>
+		 -->
+		<div id="section_hello">
+	  	<p><em>Essayez : </em></p>
+	   	<p class="voice_instructions">Dites "bonjour!"</p>
+	  	<p class="hello">salut!</p>
+		<p class="voice_instructions_after">Pour naviguer sur le site : Dites "prénoms", "météo", "biorythme", "géolocalisation", ou "recharger la page".</p>
+		</div>
+		<h2>Credits</h2>
+		<p align="justify">The scripts used to perform the VOCALR are : </p>
+				<ol class="list-group">
+					<li class="list-group-item">
+						<p>VocalR (<a href="https://github.com/ctrlfagency/VocalRecognition/tree/master/VocalR">see more</a>)</p>
+					</li>
+				</ol>
+		  
+
+	      <p><a class="btn btn-primary btn-lg" href="https://github.com/tel2geo/t2g/tree/master/VOCALR" role="button">Follow-Me on Github</a></p>
+	    </div>
+	  </div>
+	<div id="unsupported" class="hidden">
+	   <h4>It seems that your browser is NOT supporting vocal recognition.</h4>
+	   <p>Think to update (chrome, internet explorer , safari or firefox). Don't forget to allow ssl certificate from StartCOM CA in order to be able to browse the website <a href="https://vocal.ctrlfagency.com/">here.</a></p>
+	</div>
+	<!-- 
+	Chargement de la lib highlight : 
+	Cette lib permet les effet show et hide et aussi de glisser
+	 -->
+	<script src="js/highlight.pack.js"></script>
+	<script>
+	hljs.initHighlightingOnLoad();
+	</script>
+</body>
+</html>
+

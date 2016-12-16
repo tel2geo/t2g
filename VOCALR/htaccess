@@ -1,0 +1,22 @@
+# a2enmod headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|pdf|woff)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    <FilesMatch "\.(js|css|pdf|woff)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+</IfModule>
+Options +FollowSymlinks
+RewriteEngine on
+# Force le HTTPS et le www
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+REwriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Ôte les extensions .html   
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
