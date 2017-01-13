@@ -1,0 +1,162 @@
+/* On configure les cartes */
+	html,body {
+    overflow-y:hidden;
+    overflow-x:hidden;
+	padding:0px;
+	margin:0px;
+		}
+	#mapid { height: 100%; width: 100%; }
+/* configuration des fontes */
+@font-face {
+    font-family: Conv_Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.eot);
+    src: local('☺'), url(../fonts/Montserrat-Regular.woff) format('woff'), url(../fonts/Montserrat-Regular.ttf) format('truetype'), url(../fonts/Montserrat-Regular.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: Conv_Montserrat-ExtraBold;
+    src: url(../fonts/Montserrat-ExtraBold.eot);
+    src: local('☺'), url(../fonts/Montserrat-ExtraBold.woff) format('woff'), url(../fonts/Montserrat-ExtraBold.ttf) format('truetype'), url(../fonts/Montserrat-ExtraBold.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: Conv_FontAwesome;
+    src: url(../fonts/FontAwesome.eot);
+    src: local('☺'), url(../fonts/FontAwesome.woff) format('woff'), url(../fonts/FontAwesome.ttf) format('truetype'), url(../fonts/FontAwesome.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" icon-"],
+[class^=icon-] {
+    font-family: Conv_FontAwesome;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none
+}
+
+.icon-earth:before {
+    content: "\f042";
+}
+.icon-github:before {
+    content: "\f09b";
+}
+.icon-talk:before {
+    content: "\f0b2";
+}
+.anime-icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+
+}
+/* on configure les puces et les h2 */
+h2 {
+    font-family: Conv_Montserrat-ExtraBold;
+	font-size: 1.2em;
+}
+h3 {
+    font-family: Conv_Montserrat-Regular;
+    color: #FFF;
+}
+a {
+    text-decoration:none;
+    color:#fff;
+}
+/* Arrière plan Modal */
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 9999; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    position: relative;
+	background: #feffff;
+    background: -moz-radial-gradient(center, ellipse cover, #feffff 0%, #ffffff 50%, #e3e3e3 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #feffff 0%,#ffffff 50%,#e3e3e3 100%);
+    background: radial-gradient(ellipse at center, #feffff 0%,#ffffff 50%,#e3e3e3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#e3e3e3',GradientType=1 );
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+	-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+     border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    font-family: Conv_Montserrat-Regular;
+    color: #000;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #0089BF;
+    color: white;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+     border-radius: 15px 15px 0px 0px;
+     text-align: center;
+}
+
+.modal-body {
+	border-radius: 15px;
+	padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #0089BF;
+    color: white;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+     border-radius: 0px 0px 15px 15px;
+	text-align: center;
+}
