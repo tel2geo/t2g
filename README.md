@@ -1,12 +1,14 @@
 # T2G
-Be the welcome to the T2G repository, this repository intends to store the work related with opendata materials at [data.gouv.fr], for [tel2geo] domains. 
+Be the welcome to the T2G repository, this repository intends to store the work related with opendata materials at [data.gouv.fr], for [tel2geo] domains and mobile.tel2geo work/services. 
 
-* [baseaddressenationale] - contains the scripts for importing the database from [base.addresse.nationale] website (ODBL license).
-* [t2g-api] - contains the api(s) for tel2geo.
+* [baseaddressenationale] - Contains the scripts for importing the database from [base.addresse.nationale] website (ODBL license).
+* [t2g-api] - Containss the api(s) for tel2geo.
 * [vocalR] - Voice recognition application for google chrome / Android webspeech API, with plenty of features included.
 * [callingcode] - A data visualisation WebGL D3.js app for displaying callingcode on a globe. 
-* [t2g-html] - Contain the tel2geo website, with t2g-api usage basic for landline phone geolocation. 
-* [t2g-android] - Contain the tel2geo Blog Android APK application with source code.
+* [t2g-html] - Contains the tel2geo website, with t2g-api usage basic for landline phone geolocation. 
+* [t2g-android] - Contains the tel2geo Blog Android APK application with source code.
+* [t2g-desktop] - Contains the t2g Maps with vocal recognition.
+
 
 
 ## Download the whole T2G Repo
@@ -16,7 +18,7 @@ $ git clone http://github.com/tel2geo/t2g.git t2g
 ```
 
 ## Licences
-The T2G repo contains multiples licenses depending of the use of the scripts and databases distributed.
+The T2G repo Containss multiples licenses depending of the use of the scripts and databases distributed.
 * Apache 2
 * Odbl
 * MIT
@@ -46,6 +48,7 @@ Thibaut LOMBARD.
    [vocalR]: <https://github.com/tel2geo/t2g/tree/master/VOCALR>
    [callingcode]: <https://github.com/tel2geo/t2g/tree/master/callingcode>
    [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android>
+   [t2g-desktop]: <https://github.com/tel2geo/t2g/tree/master/t2g-desktop>
 
   
 
