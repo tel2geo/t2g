@@ -2,12 +2,13 @@
 Be the welcome to the T2G repository, this repository intends to store the work related with opendata materials at [data.gouv.fr], for [tel2geo] domains and mobile.tel2geo work/services. 
 
 * [baseaddressenationale] - Contains the scripts for importing the database from [base.addresse.nationale] website (ODBL license).
-* [t2g-api] - Containss the api(s) for tel2geo.
+* [t2g-api] - Contains the api(s) for tel2geo.
 * [vocalR] - Voice recognition application for google chrome / Android webspeech API, with plenty of features included.
 * [callingcode] - A data visualisation WebGL D3.js app for displaying callingcode on a globe. 
 * [t2g-html] - Contains the tel2geo website, with t2g-api usage basic for landline phone geolocation. 
 * [t2g-android] - Contains the tel2geo Blog Android APK application with source code.
 * [t2g-desktop] - Contains the t2g Maps with vocal recognition.
+* [t2g-maps-android] - Contains the t2g Maps android application sources codes with vocal recognition (French, Arabic).
 
 
 
@@ -49,6 +50,8 @@ Thibaut LOMBARD.
    [callingcode]: <https://github.com/tel2geo/t2g/tree/master/callingcode>
    [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android>
    [t2g-desktop]: <https://github.com/tel2geo/t2g/tree/master/t2g-desktop>
+   [t2g-maps-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-maps-android>
+
 
   
 
