@@ -5,7 +5,7 @@
 	var center_lat = 34.0132500;
 	var center_lng = -6.8325500;
 	var init_zoom = 7;
-	var osm_map_url = 'http://dev.tile.openstreetmap.ma/osm/{z}/{x}/{y}.png';
+	var osm_map_url = 'https://dev.tile.openstreetmap.ma/osm/{z}/{x}/{y}.png';
 	var map = new L.Map('map', {center: new L.LatLng(center_lat, center_lng), zoom: init_zoom });
 	var osm = new L.TileLayer(osm_map_url, {
 				attribution: '&copy; openstreetmap.ma',
@@ -57,7 +57,7 @@
 												var separationpremierecoordonnees = premierecoordonnees.split(",");
 												var premieraddr = tableau.toString().split(",");
 
-												var osm_map_url = 'http://dev.tile.openstreetmap.ma/osm/{z}/{x}/{y}.png';
+												var osm_map_url = 'https://dev.tile.openstreetmap.ma/osm/{z}/{x}/{y}.png';
 												var map = new L.map('map').setView([separationpremierecoordonnees[0],separationpremierecoordonnees[1]], 12);
 												var osm = new L.TileLayer(osm_map_url, {
 													attribution: '&copy; openstreetmap.ma',
