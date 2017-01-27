@@ -3,7 +3,7 @@ Be the welcome to the T2G repository, this repository intends to store the work 
 
 * [baseaddressenationale] - Contains the scripts for importing the database from [base.addresse.nationale] website (ODBL license).
 * [t2g-api] - Contains the api(s) for tel2geo.
-* [vocalR] - Voice recognition application for google chrome / Android webspeech API, with plenty of features included.
+* [VOCALR_STATIC] - Voice recognition Web application for google chrome / Android webspeech API, with plenty of features included.
 * [callingcode] - A data visualisation WebGL D3.js app for displaying callingcode on a globe. 
 * [t2g-html] - Contains the tel2geo website, with t2g-api usage basic for landline phone geolocation. 
 * [t2g-android] - Contains the tel2geo Blog Android APK application with source code.
@@ -48,7 +48,7 @@ Thibaut LOMBARD.
    [baseaddressenationale]: <https://github.com/tel2geo/t2g/tree/master/baseaddressenationale/>
    [t2g-api]: <https://github.com/tel2geo/t2g/tree/master/api/>
    [t2g-html]: <https://github.com/tel2geo/t2g/tree/master/t2ghtml/>
-   [vocalR]: <https://github.com/tel2geo/t2g/tree/master/VOCALR>
+   [VOCALR_STATIC]: <https://github.com/tel2geo/t2g/tree/master/VOCALR_STATIC/>
    [callingcode]: <https://github.com/tel2geo/t2g/tree/master/callingcode>
    [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android>
    [t2g-desktop]: <https://github.com/tel2geo/t2g/tree/master/t2g-desktop>
