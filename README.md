@@ -1,5 +1,5 @@
 # T2G
-Be the welcome to the T2G repository, this repository intends to store the work related with opendata materials at [data.gouv.fr], for [tel2geo] domains and mobile.tel2geo work/services. 
+Be the welcome to the T2G repository, this repository intends to store the work related with opendata materials at [data.gouv.fr], for [tel2geo] domains and tel2geo work/services. 
 
 * [baseaddressenationale] - Contains the scripts for importing the database from [base.addresse.nationale] website (ODBL license).
 * [t2g-api] - Contains the api(s) for tel2geo.
@@ -19,16 +19,18 @@ $ git clone http://github.com/tel2geo/t2g.git t2g
 ```
 
 ## Licences
-The T2G repo Containss multiples licenses depending of the use of the scripts and databases distributed.
+The T2G repo Contains multiple licenses depending on the use of the scripts and databases distributed.
 * Apache 2
 * Odbl
 * MIT
 * GNU GPL3
-* CC - BY NC ND
+* DWYDBWI
 
+Mainly this work is free license, to use , share, sell...
 ## External links
 * [base.addresse.nationale] -   The official link to download the Address database with more than 26 000 000 rows.
-* [tel2geo] - the first tel2geo project , retreive geo data from a phone number.
+* [tel2geo] - the tel2geo project, API etc...
+* [mobile.tel2geo.fr] - Opensource Geolocation Vocal Recognition (french and arabic) Android APP and Desktop (Browser) web application.
 
 
 
@@ -51,7 +53,7 @@ Thibaut LOMBARD.
    [t2g-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-android>
    [t2g-desktop]: <https://github.com/tel2geo/t2g/tree/master/t2g-desktop>
    [t2g-maps-android]: <https://github.com/tel2geo/t2g/tree/master/t2g-maps-android>
-
+   [mobile.tel2geo.fr]: <https://mobile.tel2geo.fr/>
 
   
 
