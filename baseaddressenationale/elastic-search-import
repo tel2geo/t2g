@@ -1,0 +1,67 @@
+Importation de la base d'adresses nationale sur Elasticsearch 
+=============================================================
+Créé pour l'installation de la base d'addresse nationale sur elasticsearch inférieur a 2.3
+1 ) situez vous dans le dossier /etc/elasticsearch/
+wget http://xbib.org/repository/org/xbib/elasticsearch/importer/elasticsearch-jdbc/2.3.4.1/elasticsearch-jdbc-2.3.4.1-dist.zip
+unzip *.zip
+
+echo '{
+"type":"jdbc",
+"jdbc":{
+
+"url":"jdbc:mysql://localhost:3306/addr",
+"user":"root",
+"password":"your mysql password",
+"sql":"SELECT * FROM addr",
+"index":"addr",
+"type":"addrs",
+"autocommit":"true",
+"metrics": {
+            "enabled" : true
+        },
+        "elasticsearch" : {
+             "cluster" : "Batman",
+	     "node" : "Gotham",
+             "host" : "localhost",
+             "port" : 9900,
+	     "user" : "es_admin",
+	     "password" : "your password shield"	 
+        } 
+}
+}' | java -cp "/etc/elasticsearch/elasticsearch-jdbc-2.3.4.1/lib/*" -"Dlog4j.configurationFile=file:////etc/elasticsearch/elasticsearch-jdbc-2.3.4.1/bin/log4j2.xml" "org.xbib.tools.Runner" "org.xbib.tools.JDBCImporter"
+service elasticsearch restart
+
+2 ) Pour l'importation mysql -> elasticsearch supérieure ou égale à la version 2.4 ... 5.x
+Utiliser le fichier : 
+nano /etc/logstash/conf.d/logstash-jdbc.conf
+input {
+  jdbc {
+    jdbc_driver_library => "/etc/elasticsearch/elasticsearch-jdbc-2.3.4.1/lib/mysql-connector-java-5.1.38.jar"
+    jdbc_driver_class => "com.mysql.jdbc.Driver"
+    jdbc_connection_string => "jdbc:mysql://localhost:3306/addr"
+    jdbc_user => "root"
+    jdbc_password => "your mysql password"
+    schedule => "* * * * *"
+    statement => "SELECT * FROM addr"
+  }
+}
+output {
+    elasticsearch {
+        index => "banfr"
+        document_type => "addr"
+        hosts => "localhost:9900"
+        user => "es_admin"
+        password => "your password shield"
+    }
+}
+
+Valider la configuration avec la manoeuvre suivante : 
+/opt/logstash/bin/logstash agent -f /etc/logstash/conf.d/logsash-jdbc.conf
+
+A utiliser si vous avez suivi le Tutorial elasticsearch  : 
+https://github.com/ctrlfagency/machinelearning/blob/master/machinelearning/elasticsearch-2.4-Kibana4-logstash-filebeat-OpenVZ-Ubuntu14-tutorial
+
+Documentation 
+http://techieroop.com/indexing-mysql-data-into-elasticsearch/
+https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html#_dealing_with_large_result_sets
+https://qbox.io/blog/migrating-mysql-data-into-elasticsearch-using-logstash
