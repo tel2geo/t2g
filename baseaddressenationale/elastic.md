@@ -59,9 +59,13 @@ A partir du fichier téléchargé.
 * Télécharger et extraire le fichier zip.
 * Remplacer http://username:password@domainname:port/ban/fr/ par vos identifiants , protocole, url, port de cluster elasticsearch.
 * Executer le fichier sh extrait.
+* Vérifiez vos volumes de fichier et supprimer les fichiers temporaires pour nettoyer l'espace
+
 ```sh
 sed -i 's#http://username:password@domainname:port/ban/fr/[[:digit:]]*#http://newusername:newpassword@newdomainname:newport/ban/fr/#g' all.csv.sh
 chmod +x all.csv.sh && sh all.csv.sh & exit
+cd / &&  du -k | sort -n | perl -ne 'if ( /^(\d+)\s+(.*$)/){$l=log($1+.1);$m=int($l/log(1024)); printf ("%6.1f\t%s\t%25s %s\n",($1/(2**(10*$m))),(("K","M","G","T","P")[$m]),"*"x (1.5*$l),$2);}' 
+
 ```
 
 ## Liens externes
