@@ -1,4 +1,4 @@
-# Importation Base d'addresse nationale sur ElasticSearch
+# Importation Base d'adresse nationale sur ElasticSearch (command-line)
 Voilà les consignes d'importation de la base d'adresses nationale disponible sur data.gouv.fr.
 
 ## Méthode 1
