@@ -56,7 +56,7 @@ A partir du fichier téléchargé.
 
 ### Manoeuvres à effectuer 
 
-* Télécharger et extraire le fichier zip.
+* Télécharger et extraire le fichier rar.
 * Remplacer http://username:password@domainname:port/ban/fr/ par vos identifiants , protocole, url, port de cluster elasticsearch.
 * Executer le fichier sh extrait.
 * Vérifiez vos volumes de fichier et supprimer les fichiers temporaires pour nettoyer l'espace
@@ -74,5 +74,5 @@ cd / &&  du -k | sort -n | perl -ne 'if ( /^(\d+)\s+(.*$)/){$l=log($1+.1);$m=int
 
 [comment]: #
    [data.gouv.fr]: <https://www.data.gouv.fr/fr/datasets/base-d-adresses-nationale-ouverte-bano/>
-   [ban.gdrive]: <https://www.data.gouv.fr/fr/datasets/base-d-adresses-nationale-ouverte-bano/>
+   [ban.gdrive]: <https://drive.google.com/open?id=0B9WwPoU4qOvnaE5rc2dkRzMxTTg>
 
