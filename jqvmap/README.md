@@ -62,6 +62,6 @@ Copyleft - Thibaut Marie Pierre LOMBARD
    [maps/jquery.vmap.world.js]: <https://github.com/tel2geo/t2g/tree/master/jqvmap/maps/jquery.vmap.world.js>
    [demo.html]: <https://github.com/tel2geo/t2g/tree/master/jqvmap/demo.html>
    [js/jquery.vmap.sampledata.js]: <https://github.com/tel2geo/t2g/tree/master/jqvmap/js/jquery.vmap.sampledata.js>
-   [image]: <https://raw.githubusercontent.com/tel2geo/t2g/tree/master/jqvmap/images/map.png>
+   [image]: <https://raw.githubusercontent.com/tel2geo/t2g/master/jqvmap/images/map.png>
    [codepen]: <http://codepen.io/anon/pen/ZYWxbJ>
    [GNU-GPL]: <https://www.gnu.org/licenses/licenses.fr.html>
