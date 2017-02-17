@@ -1,5 +1,5 @@
 # JQVMAP - Modded : High Quality Responsive interactive Map
-![image](https://raw.githubusercontent.com/tel2geo/t2g/tree/master/jqvmap/images/map.png "JQVMAP MODDED")
+![image](https://raw.githubusercontent.com/tel2geo/t2g/master/jqvmap/images/map.png)
 
 This is the modded version of [JQVMAP] , an interactive Map with jQuery based on Jvectormap. 
 
