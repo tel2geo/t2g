@@ -18,21 +18,36 @@
 	<link href="bootstrap.min.css" rel="stylesheet">
 	<script>
 	$(document).ready(function(){
-
+	function getip(){
+					$.ajax({
+							url : "https://www.thibautlombard.space/geo/ip.php?callback=?",
+							dataType:"jsonp",
+							jsonp:"callback",
+							success:function(data)
+							{
+							var	ip = data.ip;
+							getiptocoord(ip);
+							}
+						});
+			}
+	getip();
 	//fonction de conversion ip -> coordonnées 
-	function getiptocoord(){
-		
-		  $.getJSON("http://ip-api.com/json",function(data){
-						
-						lati = data.lat;
-						longi = data.lon;
-						alert(lati + '<-lat-long->' + longi);
-						// appel à la premiere fonction de récupération latitude et longitude
-						// pour affichage des prévisions météos
-						getfirstweatherforecast(lati,longi);
-					});
+	function getiptocoord(ip){
+
+						$.ajax({
+							url : "//api.tel2geo.fr/wthr/api/ip/"+ip+"/mod/ip/callback/",
+							dataType:"jsonp",
+							jsonp:"callback",
+							success:function(data)
+							{
+	                                                var lati = data.lat;
+                                               		var longi = data.lon;
+				
+                                	                getfirstweatherforecast(lati,longi);
+
+							}
+						});
 				}
-	getiptocoord();	
 	
    // fonction d'affichage des données météos
    function getfirstweatherforecast(lati,longi){
@@ -116,12 +131,11 @@
 		// à décommenter pour debug
 		//alert(lati + '<-lat-long->' + longi + 'api ');
 		$.ajax({
-        url: "//api.openweathermap.org/data/2.5/forecast?lat="+lati+"&lon="+longi+"&appid=8fe2144a19b6e3d1e1030637b93c02a7&callback=?",
+        url: "//api.tel2geo.fr/wthr/api/mod/owm/lat/"+lati+"/lon/"+longi+"/callback/",
         dataType: "jsonp",
         jsonp:"callback",
         success:function(data)	{
 						var city = data.city.name;
-						alert(city);
 						$("#titreville").html(city);
 						for(var i=0; i<data.list.length; i++){
 						  var weatherDescr = data.list[i].weather[0].description;
@@ -201,7 +215,7 @@
 		cm.html('<h1 id="titreville"></h1>');
 		citycoords.html('');
 		$.ajax({
-        url: "//nominatim.openstreetmap.org/search.php?q="+villepays+"&format=jsonv2&json_callback=?",
+        url: "//api.tel2geo.fr/wthr/api/villepays/"+villepays+"/mod/osm/callback/",
         dataType: "jsonp",
         jsonp:"callback",
         success:function(data)
@@ -300,7 +314,7 @@ function getmeteo(latitudeville,longitudeville){
 						962 : "ouragans"
 						};
 		$.ajax({
-        url: "//api.openweathermap.org/data/2.5/forecast?lat="+latitudeville+"&lon="+longitudeville+"&appid=8fe2144a19b6e3d1e1030637b93c02a7&callback=?",
+		url: "//api.tel2geo.fr/wthr/api/mod/owm/lat/"+latitudeville+"/lon/"+longitudeville+"/callback/",
         dataType: "jsonp",
         jsonp:"callback",
         success:function(data)
